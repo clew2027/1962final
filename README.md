@@ -5,13 +5,11 @@ A React + TypeScript app for creating and sharing animated digital postcards wit
 ## Features
 
 - **Postcard Editor** — 8 templates, live preview, stickers, font picker, 5 animations
-- **AI Suggestions** — Claude-powered message generator (requires API key)
 - **Groups** — Create groups with shareable invite codes, send postcards to a shared feed
 - **Preview Page** — Shareable link per postcard with envelope reveal animation
-- **Persistence** — State saved to localStorage (swap for Supabase for multi-user)
+- **Persistence** — State saved
 
-## Quick Start
-
+## how to start the project 
 ```bash
 npm install
 npm run dev
@@ -41,8 +39,9 @@ src/
 └── main.tsx                    # Entry point
 ```
 
-## Backend (Supabase)
+## Backend Supabase
 
+```sql
 -- Users (handled by Supabase Auth)
 
 create table groups (
@@ -70,5 +69,5 @@ create table postcards (
   anim text,
   created_at timestamptz default now()
 );
-```
-# 1962final
+```# digitalpostcards
+# digitalpostcards
